@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Filename    : chapter_1.tex 
+%
+%   Description : This file will contain your Research Description.
+%                 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+\label{sec:intro}    %--note: labels help you with hyperlink editing (using your IDE)
+
+This chapter builds the motivation for the conduct of the research through a description of the background of the study or the current state of technology. This is followed by the research objectives, the scope and limitations, and significance of the research. The chapter ends with the research methodology describing the different activities to be conducted to achieve the goals of this research.
+
+
+%%
+%% --- 1.1 Background of the Study --- %%
+%%
+
+\section{Background of the Study}
+\label{sec:overview}
+
+%
+%   NOTE: You have to delete/replace the unnecessary paragraphs with your own text.
+%
+
+This section gives the reader an overview of the specific technology or field in the international or local setting. The information regarding the technology or field should be contemporary and not
+based on outdated sources. Discussion must not be too technical or too detailed.
+
+Follow the inverted pyramid to describe each of the following. Allocate one (1) paragraph per level in the pyramid. 
+
+% Describe the research area
+
+Research area ...
+
+% Describe the domain (where will you apply the topic)
+
+Domain of application or specific research sub-field ...
+
+% Give a synthesis of previous work
+
+Synthesis of previous studies...
+
+% State the problem and the research question
+
+Paragraph containing the Problem Statement or the Research Question.
+ 
+This section ends with a discussion on the problem/s faced by or that still exist in the specific technology or field (e.g., limitations of existing software or algorithms). It should not contain your research objectives or goal; instead, the problem statement
+would lead to the research objectives to be stated in 1.2.
+
+\subsection{Figures}
+
+Often times, a graph, illustration, screenshot, or any image can help a reader better understand what we say in text. In academic writing, we call them \textbf{figures}. Please add as many figures as necessary to help build your narrative, but do not go overboard. 
+
+You can add figures in JPG or PNG format as shown in Figure \ref{fig:disneystock}. All figures should also have a descriptive caption. As a general principle, your caption should adequately describe what is shown in the figure, and not just short texts. If we remove all the surrounding text, the reader should still understand what your figure is. 
+
+All figures should be referred to at least once in the surrounding paragraphs. Make sure that you explain what the figure is all about, and that you refer to your figure. You can also use the surround paragraphs to highlight key insights or parts of your figure. For example, \figref{fig:disneystock} shows a graph of the performance of Disney stock from the 1980s to 2012.
+
+%--- the following example shows how to include a figure in PNG format
+\begin{figure}[t]                %-- use [t] to place figure at top, [b] to place at the bottom, [h] for here
+   \centering                    %-- use this to center the figure
+   \includegraphics{DisneyChart.png}      %-- include image file named as "disneychart.png" 
+   \caption{Disney's stock price chart from the 1980s up to 2012. The top chart shows the stock price in each month. The bottom chart shows the change in volume of transactions. The bars are colored based on the type of movement that happened in a month.}
+    \label{fig:disneystock}
+\end{figure}
+
+\subsection{References}
+
+Some notes on citing references. When using APA format, the author-date method of citation is followed. This means that the author's last name and the year of publication for the source should appear in the text, and a complete reference should appear in the reference list.
+
+%
+% Examples:
+%     	Smith (1970) compared reaction times . . .
+%     	In a recent study of reaction times (Smith, 1970), . . .   
+%     	In 1970, Smith compared reaction times . . .
+%	Smith, et al., (1970) compared reaction times . . .
+%     	In a recent study of reaction times (Smith, et al., 1970), . . .  
+%     	In 1970, Smith, et al., compared reaction times . . .
+%
+
+Here are some examples on how to do the referencing (note author's name and years are different from commented examples). For APA citation details, refer
+to \url{http://www.ctan.org/tex-archive/biblio/bibtex/contrib/apacite/}. 
+
+\begin{itemize}
+ \item \citeA{kartch:2000:ERA} compared reaction times...
+ \item In a recent study of reaction times \cite{kartch:2000:ERA}...
+ \item In \citeyearNP{kartch:2000:ERA}, \citeauthor{kartch:2000:ERA} compared reaction times...
+ \item \shortciteA{fedkiw:2001:VSO} compared reaction times... 
+ \item In a recent study of reaction times \cite{fedkiw:2001:VSO}...
+ \item In \citeyearNP{fedkiw:2001:VSO}, \shortciteauthor{fedkiw:2001:VSO}, compared reaction times...
+\end{itemize}
+
+The following are references from journal articles \cite{Park:2006:DSI, Pellacini:2005:LAH, sako:2001:SSB}.  Here's an MS thesis document \cite{yee:2000:SSA}, and this is from a PhD dissertation \cite{kartch:2000:ERA}. For a book, reference is given as \cite{parke:1996:CFA}.  Proceedings from a conference samples are \cite{Jobs95, fedkiw:2001:VSO,levoy:2000:TDM}.  
+
+The sample bibliography file named \textbf{myreferences.bib} is from the
+SIGGRAPH \LaTeX template.  You can use a text editor to view the contents of the bib file. It is your task to create your own bibliography file.  For those who downloaded papers from ACM or IEEE sites, there is a BibTeX link that you can click; thereafter, you just simply need to copy and paste the BibTeX entry into your own bibliography file.
+
+\subsection{Code snippet}
+
+The following shows how to include a program source code (or algorithm). The verbatim environment, as the name suggests, outputs text (including white spaces) as is...
+
+\begin{verbatim}
+               #include <stdio.h>
+               main()
+               {
+                    printf("Hello world!\n");
+               }
+\end{verbatim}
+
+
+%%
+%% --- 1.2 Research Objectives --- %%
+%%
+
+\section{Research Objectives}
+
+This subsection states the over--all goal that must be achieved to answer the problem. Address the following: Given your research challenge or opportunity, how do you intend to solve it? What is the main outcome of your research? What kind of contribution do you want to achieve?
+
+The \textbf{general objective} is broken down into three or more specific objectives. The \textbf{specific objectives} are relatively smaller objectives that help you attain your general objective. You can formulate your specific objectives based on your running questions about the project. For example, the group does not have a good picture yet of the different conversation patterns between humans that can be mimicked by conversational agents. A specific objective can be "to identify different human-human conversation patterns." These objectives must be specific, measurable, attainable, realistic, and time-bounded.
+
+Reviewing related literature, studying a particular programming language or development tool (e.g., to study Windows/Object-Oriented/Graphics/C++ programming), and documentation to accomplish the general objective is inherent in all thesis projects and, therefore, must not be included here.
+
+
+\begin{comment}
+%
+% IPR acknowledgement: the following sentences and examples are from Ethel Ong's slides 
+%     on Research Objectives
+%
+
+How to formulate your research objectives:
+1. Identify what research steps do you need to perform to achieve your general objective.
+2. Identify the questions that must be answered for you to achieve your general objective.
+    Thereafter, convert these questions into action statements
+
+
+Example #1:
+
+Question:
+    What strategies do human educators employ in collaborative storytelling with children?
+
+Specific Objective:
+   To review existing strategies employed by language educators when sharing storytelling with children
+
+
+Example #2:
+
+Question:
+   How will you represent commonsense knowledge for use by computer systems?
+
+Specific Objective:
+   To identify knowledge representation approaches used by existing story generation systems
+
+Example #3:
+Question:
+   What types of storytelling knowledge are needed to generate stories?
+
+Objective:
+    To identify the different types of storytelling knowledge used in generating stories
+
+Example #4:
+Question:
+    What machine learning approaches will you utilize?
+
+Specific Objective:
+    To determine existing machine learning algorithms [that can be used in training the computer system to detect cyberbullying cases] 
+
+Example #5: 
+Question:
+    How will your research output be evaluated?
+
+Specific Objective:
+    To define evaluation metrics for validating the accuracy of the translation
+\end{comment}
+
+
+%
+%  The following is the format for presenting your specific objectives; replace them with your own 
+%
+
+The specific objectives of this research are as follows:
+\begin{enumerate}
+   \item To identify knowledge representation approaches used by existing story generation systems;
+   \item To identify the different types of storytelling knowledge used in generating stories;
+   \item To build a neural-based model for generating events comprising a story; and
+   \item To define evaluation metrics for evaluating the performance of the event generation model.
+\end{enumerate}
+
+
+%%
+%% --- 1.3 Scope and Limitations --- %%
+%%
+
+\section{Scope and Limitations of the Research}
+\label{sec:scopelimitations}
+
+This section discusses the boundaries, with respect to the objectives, of the research and the constraints within which the research will be developed. Describe what is and is not included in the scope of your research, supported by your main research question and findings of previous studies. Do not use weak excuses such as the lack of time and/or knowledge to perform the research.
+
+A good rule of thumb is to allocate one paragraph for each of your specific objectives that (1) contains a brief overview of the concept/theory and the purpose of doing the associated objective; and (2) includes a description of the scope/limitation of your study, and followed by brief purpose, rationale and/or justification for your decisions.
+
+The following should also be indicated in your Scope and Limitations (in the appropriate paragraphs matching the objectives, or as a stand-alone paragraph):
+\begin{itemize}
+   \item The profile and demographics of your target participants
+   \item Your data sources (i.e., new data, data from previous studies, data to be provided by some experts, data to be retrieved from social networks)
+   \item The specific technology platform to be utilized
+   \item The methods for collecting the data
+   \item The coverage areas or locations
+   \item The duration or time period (e.g., news articles for the year 2016-2017)
+\end{itemize}
+
+
+%%
+%% --- 1.4 Significance of the Research --- %%
+%%
+
+\section{Significance of the Research}
+
+This section explains why research must be done in this area.  It rationalizes the objective of the research with that of the stated problem. Avoid including sentences such as ``This research will be beneficial to the proponent/department/college'' as this is already an inherent requirement of all BS and MS thesis projects.  Focus on the research's contribution to the Computer Science field.
+
+The following are guide questions that may help your formulate the significance of your research. 
+
+
+%
+% IPR acknowledgement: the following list of items are from Ethel Ong's slides on Significance of the Research
+%
+\begin{itemize}
+\item  What is the relevance and contribution of your work to the computer science community? 
+
+\begin{itemize} 
+\item How does your technical contributions or empirical findings advance the field or grow our body of knowledge? 
+\item If you built a prototype of an interaction technique, interface, library, tool, or system, what is value does it add compared to existing solutions? 
+\end{itemize}
+
+\item What will be your contributions to society in general? 
+    \begin{itemize}
+      \item How will your main stakeholders benefit from your technical contributions or empirical findings? 
+      \item What are the positive social or economic impacts? 
+   \end{itemize}
+\end{itemize}
+
+\begin{comment}
+If applicable, describe possible commercialization and/or innovation in your research.
+\end{comment}
