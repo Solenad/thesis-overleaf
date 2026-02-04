@@ -2,18 +2,18 @@ version: "3.8"
 
 services:
   overleaf:
-    build .
+    build: .
     container_name: overleaf
     restart: unless-stopped
-    env_file:
-      - .env
-    ports:
-      - "8080:80"
     environment:
       - OVERLEAF_MONGO_URL=${MONGO_URL}
       - OVERLEAF_REDIS_HOST=${REDIS_HOST}
       - OVERLEAF_REDIS_PORT=${REDIS_PORT}
+      - OVERLEAF_REDIS_PASS=${REDIS_PASS}
+      - REDIS_PASSWORD=${REDIS_PASS}
       - OVERLEAF_SITE_URL=${OVERLEAF_SITE_URL}
+      - OVERLEAF_BEHIND_PROXY=true
+      - OVERLEAF_ALLOW_SHELL_ESCAPE=true
     volumes:
       - overleaf-data:/var/lib/overleaf
 
