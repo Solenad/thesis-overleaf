@@ -6,11 +6,13 @@ services:
     container_name: overleaf
     restart: unless-stopped
     environment:
-      - OVERLEAF_MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0
-      - OVERLEAF_REDIS_HOST=thesis-redis-zshcmj
-      - OVERLEAF_REDIS_PORT=6379
-      - OVERLEAF_REDIS_PASS=czwfh3pahsctrqjp
-      - OVERLEAF_SITE_URL=https://thesis-dizon.app.dlsu-lscs.org/
+      - OVERLEAF_MONGO_URL=${OVERLEAF_MONGO_URL}
+      - OVERLEAF_REDIS_HOST=${OVERLEAF_REDIS_HOST}
+      - OVERLEAF_REDIS_PORT=${OVERLEAF_REDIS_PORT}
+      - OVERLEAF_REDIS_PASS=${OVERLEAF_REDIS_PASS}
+
+      - OVERLEAF_SITE_URL=${OVERLEAF_SITE_URL}
+      - OVERLEAF_ADMIN_EMAIL=${OVERLEAF_ADMIN_EMAIL}
       - OVERLEAF_BEHIND_PROXY=true
       - OVERLEAF_ALLOW_SHELL_ESCAPE=true
     volumes:
