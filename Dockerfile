@@ -5,6 +5,21 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN tlmgr update --self && \
-    tlmgr option docfiles 0 && \
-    tlmgr option srcfiles 0 && \
-    tlmgr install --force scheme-full
+    tlmgr install \
+    scheme-basic \
+    pdfpages \
+    apacite \
+    amsmath \
+    amsfonts \
+    booktabs \
+    graphics \
+    tools \
+    url \
+    eso-pic \
+    atbegshi \
+    pdftexcmds \
+    infwarerr \
+    kvoptions \
+    etoolbox \
+    caption \
+    geometry
