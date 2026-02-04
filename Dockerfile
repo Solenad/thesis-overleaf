@@ -6,9 +6,11 @@ RUN apt-get update && apt-get install -y \
     python3-pygments \
     && rm -rf /var/lib/apt/lists/*
 
-RUN tlmgr update --self && \
+RUN tlmgr option repository https://mirror.ctan.org/systems/texlive/tlnet && \
+    tlmgr update --self && \
+    tlmgr install scheme-medium && \
+    tlmgr install hyphen-polish && \
     tlmgr install \
-    scheme-medium \
     pdfpages \
     apacite \
     amsmath \
