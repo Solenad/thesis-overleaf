@@ -6,10 +6,12 @@ services:
     container_name: overleaf
     restart: unless-stopped
     environment:
-      - SHARELATEX_MONGO_URL=${MONGO_URL}
-      - SHARELATEX_REDIS_HOST=${REDIS_HOST}
-      - SHARELATEX_REDIS_PORT=${REDIS_PORT}
-      - SHARELATEX_REDIS_PASS=${REDIS_PASS}
+      - SHARELATEX_MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0&directConnection=true
+      - SHARELATEX_REDIS_HOST=thesis-redis-zshcmj
+      - SHARELATEX_REDIS_PORT=6379
+      - SHARELATEX_REDIS_PASS=czwfh3pahsctrqjp
+      - MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0&directConnection=true
+      - REDIS_HOST=thesis-redis-zshcmj
       - OVERLEAF_SITE_URL=${OVERLEAF_SITE_URL}
       - OVERLEAF_BEHIND_PROXY=true
       - OVERLEAF_ALLOW_SHELL_ESCAPE=true
