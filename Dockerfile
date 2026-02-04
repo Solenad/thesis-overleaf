@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN /usr/local/texlive/2023/bin/x86_64-linux/tlmgr update --self && \
     /usr/local/texlive/2023/bin/x86_64-linux/tlmgr install \
-    scheme-basic \
+    scheme-small \
     pdfpages \
     apacite \
     amsmath \
