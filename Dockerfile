@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install -y \
     python3-pygments \
     && rm -rf /var/lib/apt/lists/*
 
-RUN tlmgr option -- install-doc 0 && \
-    tlmgr option -- install-src 0 && \
-    tlmgr update --self --all && \
+RUN tlmgr update --self && \
+    tlmgr option docfiles 0 && \
+    tlmgr option srcfiles 0 && \
     tlmgr install scheme-full
 
 RUN tlmgr remove \
