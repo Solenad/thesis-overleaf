@@ -4,16 +4,13 @@ services:
   overleaf:
     build: .
     container_name: overleaf
-    command: ["/bin/sh", "-c", "env | grep -E 'MONGO|SHARELATEX' && sleep 60"]
     restart: unless-stopped
     environment:
-      - SHARELATEX_MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0
-      - SHARELATEX_REDIS_HOST=thesis-redis-zshcmj
-      - SHARELATEX_REDIS_PORT=6379
-      - SHARELATEX_REDIS_PASS=czwfh3pahsctrqjp
-      - MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0
-      - REDIS_HOST=thesis-redis-zshcmj
-      - OVERLEAF_SITE_URL=${OVERLEAF_SITE_URL}
+      - OVERLEAF_MONGO_URL=mongodb://mongo:ok5m15bnoe5nqn8u@thesis-mongo-ez1bil:27017/sharelatex?authSource=admin&replicaSet=rs0
+      - OVERLEAF_REDIS_HOST=thesis-redis-zshcmj
+      - OVERLEAF_REDIS_PORT=6379
+      - OVERLEAF_REDIS_PASS=czwfh3pahsctrqjp
+      - OVERLEAF_SITE_URL=https://thesis-dizon.app.dlsu-lscs.org/
       - OVERLEAF_BEHIND_PROXY=true
       - OVERLEAF_ALLOW_SHELL_ESCAPE=true
     volumes:
